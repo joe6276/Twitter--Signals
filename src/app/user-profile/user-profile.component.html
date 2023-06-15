@@ -1,0 +1,21 @@
+
+
+
+
+
+<div class="h-44 bg-gradient-to-r from-VeryPaleRed via-DarkBlue to-TagBlue" *ngIf="userDetails() ">
+    <img  class="w-full h-full" src="../../assets/background.jpg" alt="">
+</div>
+
+
+<div class="flex flex-col mb-4  p-6 space-y-2 rounded-lg bg-VeryLightGray" *ngIf="userDetails() as user ">
+    <img src ="https://sb.kaleidousercontent.com/67418/1672x1018/6463a5af0d/screenshot-2022-05-24-at-15-22-28.png" class="w-40 h-40 -mt-28 rounded-full" alt=""/>
+    <h5 class="text-lg font-bold"> {{user.name}}</h5>
+    <p>@ {{user.username}} </p>
+    <a href="{{user.website}}">Link to my website</a>
+    <p>{{user.company.catchPhrase}}</p>
+    <div class="flex items-center space-x-2">
+        <img src="../../assets/location.png" class="h-4 w-4" alt=""> 
+    <p>{{user.address.city}}</p>
+    </div>
+</div>

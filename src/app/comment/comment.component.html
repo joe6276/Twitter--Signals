@@ -1,0 +1,40 @@
+<div *ngIf="comments.length" >
+  
+    <h1> Post {{comments[0].postId}} Comments</h1>
+ <div class="flex flex-col p-2  space-x-6 md:flex-row" *ngFor="let comment of comments" >
+
+   <div class="flex w-1/6">
+     <img src="https://sb.kaleidousercontent.com/67418/1672x1018/6463a5af0d/screenshot-2022-05-24-at-15-22-28.png" alt="" class="rounded">
+   </div>
+
+   <div class="flex flex-col space-y-2  md:w-5/6 ">
+     <div class="flex items-center space-x-2">
+       <p class="text-black">{{comment.name}}</p>
+       <img src="../../assets/verify.png" class="h-4 w-4" alt="">
+        <img src="../../assets/twitter.png" class="h-4 w-4" alt="">
+     </div>
+     <p>
+      {{comment.body}}
+     </p>
+     <hr>
+     <div class=" flex  space-x-8 ">
+        
+        <div class="flex space-x-2 items-center">
+          <p>  <img src="../../assets/message.png" class="h-4 w-4" alt=""> </p>
+          <p>0</p>
+        </div>
+
+        <div class="flex space-x-2 items-center">
+          <img src="../assets/retweet.png" class="h-4 w-4"  alt="">
+          <p>0</p>
+        </div>
+
+        <div class="flex space-x-2 items-center">
+            <p>  <img src="../../assets/heart.png" class="h-4 w-4" alt=""> </p>
+          <p>0</p>
+        </div>
+      
+      </div>
+   </div>
+ </div>
+</div>
